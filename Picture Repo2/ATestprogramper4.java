@@ -30,9 +30,10 @@ public static void main( String args[])
 
 	Picture p3 = new Picture("images\\rose.jpg");
 
-	p3.negate();
+	//p3.negate();
 
-
+	p3.mirrorVertical();
+	p3.explore();
 	//p2.explore();
 	//System.out.println(p  );
 	//p.show();
@@ -42,13 +43,13 @@ public static void main( String args[])
 	Picture copyTo = new Picture("images\\7inx95in.jpg");
 	copyTo.explore();
 
-	copyTo.copyKatie();
-	copyTo.explore();
-	copyTo.copyKatieMidway();
-	copyTo.explore();
+	//copyTo.copyKatie();
+	//copyTo.explore();
+	//copyTo.copyKatieMidway();
+	//copyTo.explore();
 
-	copyTo.copyKatieFace();
-	copyTo.explore();
+	//copyTo.copyKatieFace();
+	//copyTo.explore();
 
 
 	//copyTo.mirrorVertical();
@@ -56,11 +57,11 @@ public static void main( String args[])
 	//copyTo.mirrorHorizontal();
 	//copyTo.explore();
 
-	copyTo.copyflowerSmaller();
-	copyTo.explore();
+	//copyTo.copyflowerSmaller();
+	//copyTo.explore();
 
-	copyTo.scale(p3);
-	copyTo.explore();
+	//copyTo.scale(p3);
+	//copyTo.explore();
 /*
 	copyTo.negate();
 	copyTo.explore();
