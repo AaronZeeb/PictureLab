@@ -54,8 +54,8 @@ public static void main( String args[])
 
 	//copyTo.mirrorVertical();
 	//copyTo.explore();
-	//copyTo.mirrorHorizontal();
-	//copyTo.explore();
+	copyTo.mirrorHorizontal();
+	copyTo.explore();
 
 	//copyTo.copyflowerSmaller();
 	//copyTo.explore();
