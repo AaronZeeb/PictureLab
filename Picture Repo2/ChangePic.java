@@ -163,8 +163,8 @@ public class ChangePic extends SimplePicture
 	   		sourceX++, targetX--)
 	   {
 		   //loop throught the rows
-		   for (int sourceY = 0, targetY = sourcePicture.getHeight();
-		   		sourceY < sourcePicture.getHeight()/2;
+		   for (int sourceY = 640, targetY = sourcePicture.getHeight();
+		   		sourceY < sourcePicture.getHeight();
 		   		sourceY++, targetY--)
 		   {
 
