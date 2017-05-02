@@ -59,7 +59,6 @@ public class ChangePic extends SimplePicture
         super(image);
     }
 
-    ////////////////////// methods ///////////////////////////////////////
     /**
      * Method to return a string with information about this picture.
      * @return a string with information about the picture such as fileName,
@@ -148,56 +147,53 @@ public class ChangePic extends SimplePicture
 
 	}//end of mirrorVertical
 
+	public void grayscale()
+		{//!!!!!! again copies all the pixels into an array!!!!!
+			Pixel[] pixelArray = this.getPixels();
+			Pixel pixel = null;
+			int intensity = 0;
 
-   public void mirrorHorizontal()
-   {
-	   String sourceFile = ("sponge.jpg");
-	   Picture sourcePicture = new Picture(sourceFile);
+			for (int i = 0; i < pixelArray.length; i++)
+			{
+				//get the current pixel
+				pixel = pixelArray[i];
 
-	   Pixel sourcePixel = null;
-	   Pixel targetPixel = null;
+				//compute the intensity of the pixel (average value)
+				intensity = (int) ((pixel.getRed() + pixel.getGreen()+
+								   pixel.getBlue())/3);
 
-	   //loop through the columns
-	   for (int sourceX = 0, targetX=sourcePicture.getWidth();
-	   		sourceX < sourcePicture.getWidth();
-	   		sourceX++, targetX--)
-	   {
-		   //loop throught the rows
-		   for (int sourceY = 640, targetY = sourcePicture.getHeight();
-		   		sourceY < sourcePicture.getHeight();
-		   		sourceY++, targetY--)
-		   {
+				//set the pixel color to the new color
+				pixel.setColor(new Color(intensity,intensity,intensity));
+			}//end of for
 
-		   		//set the target pixel color to the source pixel color
-		   		sourcePixel = sourcePicture.getPixel(sourceX,sourceY);
-		   		targetPixel = this.getPixel(targetX,targetY);
-		   		targetPixel.setColor(sourcePixel.getColor());
-			}//row loop
+		}//end of grayscale
 
-	   }//col loop
-
-
-	}//end of mirrorHorizontal
-
-public void grayscale()
-	{//!!!!!! again copies all the pixels into an array!!!!!
-		Pixel[] pixelArray = this.getPixels();
-		Pixel pixel = null;
-		int intensity = 0;
-
-		for (int i = 0; i < pixelArray.length; i++)
+	public void Recursion()
 		{
-			//get the current pixel
-			pixel = pixelArray[i];
+			//Picture flowerPicture = (new Picture("images\\rose.jpg"));
 
-			//compute the intensity of the pixel (average value)
-			intensity = (int) ((pixel.getRed() + pixel.getGreen()+
-							   pixel.getBlue())/3);
+			Pixel sourcePixel = null;
+			Pixel targetPixel = null;
 
-			//set the pixel color to the new color
-			pixel.setColor(new Color(intensity,intensity,intensity));
-		}//end of for
+		   //loop through the columns
+		   for(int sourceX=0, targetX=0;
+			   sourceX<.getWidth();
+			   sourceX+=2, targetX++)
+		   {
+			   //loop throught the rows
+			   for(int sourceY=0, targetY=0;
+				   sourceY<flowerPicture.getHeight();
+				   sourceY+=2, targetY++)
+			   {
 
-	}
+					//set the target pixel color to the source pixel color
+					sourcePixel = flowerPicture.getPixel(sourceX,sourceY);
+					targetPixel = this.getPixel(targetX,targetY);
+					targetPixel.setColor(sourcePixel.getColor());
+				}//row loop
+
+		   }//col loop
+
+		}//end of Recursion
 
 }//end of ChangePic

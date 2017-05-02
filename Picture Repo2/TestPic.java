@@ -20,10 +20,6 @@ public class TestPic
 		pic2.mirrorVertical();
 		pic2.explore();
 
-		ChangePic pic3= new ChangePic("sponge.jpg");
-		pic3.mirrorHorizontal();
-		pic3.explore();
-
 		ChangePic pic4= new ChangePic("sponge.jpg");
 		pic4.grayscale();
 		pic4.explore();
