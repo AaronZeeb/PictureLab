@@ -26,6 +26,7 @@ public class TestPic
 
         //pic.flip();
         //Canvas.copy(pic,0,0)
+        //Canvas.write("Final.jpg");
     }
 
 }//end of TestPic

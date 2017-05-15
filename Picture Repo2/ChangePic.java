@@ -168,32 +168,5 @@ public class ChangePic extends SimplePicture
 
 		}//end of grayscale
 
-	public void Recursion()
-		{
-			//Picture flowerPicture = (new Picture("images\\rose.jpg"));
-
-			Pixel sourcePixel = null;
-			Pixel targetPixel = null;
-
-		   //loop through the columns
-		   for(int sourceX=0, targetX=0;
-			   sourceX<.getWidth();
-			   sourceX+=2, targetX++)
-		   {
-			   //loop throught the rows
-			   for(int sourceY=0, targetY=0;
-				   sourceY<flowerPicture.getHeight();
-				   sourceY+=2, targetY++)
-			   {
-
-					//set the target pixel color to the source pixel color
-					sourcePixel = flowerPicture.getPixel(sourceX,sourceY);
-					targetPixel = this.getPixel(targetX,targetY);
-					targetPixel.setColor(sourcePixel.getColor());
-				}//row loop
-
-		   }//col loop
-
-		}//end of Recursion
 
 }//end of ChangePic
