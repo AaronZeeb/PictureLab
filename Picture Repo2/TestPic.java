@@ -26,7 +26,11 @@ public class TestPic
 
         //pic.flip();
         //Canvas.copy(pic,0,0)
-        //Canvas.write("Final.jpg");
+        Canvas.copyPicture(0,0,pic);
+        Canvas.copyPicture(0,634,pic1);
+        Canvas.copyPicture(1106,0,pic2);
+        Canvas.copyPicture(1106,634,pic4);
+        Canvas.write("Final.jpg");
     }
 
 }//end of TestPic
