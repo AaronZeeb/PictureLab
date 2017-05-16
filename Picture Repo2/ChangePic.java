@@ -168,13 +168,13 @@ public class ChangePic extends SimplePicture
 
 		}//end of grayscale
 
-	public void copyPicture(int x, int y, Picture sourcePicture)
+	public void copyPicture(int x, int y, ChangePic sourcePicture)
 	{
 		Pixel sourcePixel=null;
 		Pixel targetPixel=null;
 
 		//loops through each column
-		for(int sourceX=0, targetX=x; sourceX<sourcePitcure.getWidth(); sourceX++, targetX++)
+		for(int sourceX=0, targetX=x; sourceX<sourcePicture.getWidth(); sourceX++, targetX++)
 		{
 			//loop through each position in the column
 			for(int sourceY=0, targetY=y; sourceY<sourcePicture.getHeight(); sourceY++, targetY++)
