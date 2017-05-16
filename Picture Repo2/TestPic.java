@@ -24,13 +24,13 @@ public class TestPic
 		pic4.grayscale();
 		//pic4.explore();
 
-        ChangePic Canvas1 = new ChangePic("Canvas");
+        ChangePic Canvas1 = new ChangePic("Canvas.jpg");
         Canvas1.copyPicture(0,0,pic);
         Canvas1.copyPicture(0,634,pic1);
-        Canvas1.copyPicture(1106,0,pic2);
-        Canvas1.copyPicture(1106,634,pic4);
+        Canvas1.copyPicture(1006,0,pic2);
+        Canvas1.copyPicture(1006,634,pic4);
         Canvas1.explore();
-        //Canvas.write("Final.jpg");
+        Canvas1.write("Final.jpg");
     }
 
 }//end of TestPic
